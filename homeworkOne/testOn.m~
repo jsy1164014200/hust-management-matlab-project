@@ -1,0 +1,16 @@
+d = randi(100 ,100 ,400);
+k,c,h = randi(100 ,100 ,400);
+d,k,c,h = randi(100 ,100 ,400);
+d,k,c,h = randi(100 ,100 ,400);
+
+for i = 1:100
+    [opt,plan] = dySolution(d(i,:),k,c,h);
+    [opt2,plan2] = OnDySolution(d(i,:),k,c,h);
+    if opt ~= opt2
+        disp(opt);
+        disp(opt2);
+        disp(plan);
+        disp(plan2);
+        
+    end
+end
